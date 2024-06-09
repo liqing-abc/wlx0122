@@ -1,0 +1,29 @@
+
+        body{
+            background-color: #FFF;}
+        p{color:black;}
+        span{
+              font-size:50px;
+              font-family:"黑体";
+              font-weight:bold;
+              float:left;
+          }
+        .title1,.title2	{
+                color:#00F;
+                font-size:20px;
+                text-decoration:underline}
+        .title1{text-align:right;}
+        .title2{text-align:left;}
+        img{border:1px #999 dashed;}
+        .img1{
+            float:right;
+            margin-left:20px;
+        }
+        .img2{
+            float:left;
+            margin-right:20px;
+        }
+        a{
+            color: #00F;
+        }
+    

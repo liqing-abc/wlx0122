@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相关软件</title>
+    <link rel="stylesheet" href="css/page2-1.css">
+        <script type="text/javascript">
+        window.onload=function(){
+        var wrap=document.getElementById('wrap'),
+        pic=document.getElementById('pic').getElementsByTagName("li"),
+        list=document.getElementById('list').getElementsByTagName('li'),
+        index=0,
+        timer=null;
+        
+        // 定义并调用自动播放函数
+        timer = setInterval(autoPlay, 2000);
+        
+        // 鼠标划过整个容器时停止自动播放
+        wrap.onmouseover = function () {
+        clearInterval(timer);
+        }
+        
+        // 鼠标离开整个容器时继续播放至下一张
+        wrap.onmouseout = function () {
+        timer = setInterval(autoPlay, 2000);
+        }
+        // 遍历所有数字导航实现划过切换至对应的图片
+        for (var i = 0; i < list.length; i++) {
+        list[i].onmouseover = function () {
+        clearInterval(timer);
+        index = this.innerText - 1;
+        changePic(index);
+        };
+        };
+        
+        function autoPlay () {
+        if (++index >= pic.length) index = 0;
+        changePic(index);
+        }
+        
+        // 定义图片切换函数
+        function changePic (curIndex) {
+        for (var i = 0; i < pic.length; ++i) {
+        pic[i].style.display = "none";
+        list[i].className = "";
+        }
+        pic[curIndex].style.display = "block";
+        list[curIndex].className = "on";
+        }
+        
+        };
+        
+        </script> 
+</head>
+<body>
+    <div class="wrap" id='wrap'>
+        <ul id="pic">
+            <li><img src="imagines/下厨房.jpg" alt="" width="100%" height="600px"></li>
+            <li><img src="imagines/掌厨.jpg" alt="" width="100%" height="600px"></li>
+            <li><img src="imagines/豆果美食.jpg" alt="" width="100%" height="600px"></li>
+            <li><img src="imagines/嘉肴菜谱.jpg" alt="" width="100%" height="600px"></li>
+            <li><img src="imagines/懒饭.jpg" alt="" width="100%" height="600px"></li> 
+        </ul>
+        <ol id="list">
+            <li class="on">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ol>
+    </div>
+   <nav>
+    <p align="center">
+    <img src="imagines/下厨房.jpg" alt="" width="250px" height="150px">
+    <img src="imagines/掌厨.jpg" alt="" width="250px" height="150px">
+    <img src="imagines/豆果美食.jpg" alt="" width="250px" height="150px">
+    <img src="imagines/嘉肴菜谱.jpg" alt="" width="250px" height="150px">
+    <img src="imagines/懒饭.jpg" alt="" width="300px" height="150px">
+    </p><br>
+    </nav>
+        <dl>
+            <dt><h2 style="font-style: oblique;">下厨房</h2></dt><!-- 字体倾斜 -->
+		  <a href="https://www.xiachufang.com/" target="下厨房">下厨房</a>
+                 <dd>&nbsp;&nbsp;&nbsp;&nbsp;下厨房是北京瑞荻互动科技有限公司旗下的一款美食菜谱类app，APP发布于2011年11月。是中文互联网上的第一家庭美食入口，一个提供了食材食品、厨房用品购买与菜谱查询、分享的移动应用。在华为应用市场下载量超过6亿次，且被央视CCTV新闻频道报道为年轻人流行的生活方式APP。这款菜谱软件可以根据不同节气，告诉你应该吃什么，三餐不重样；此外，app不仅提供做菜的方法，数百万菜谱，上千万用户美食作品参考，还具有社区板块，与网友互动，交流厨艺、交流菜谱，提升厨艺的同时又可以交到朋友，而且定期会举办各种活动，交友互动，大奖轻松拿，且还能联合达人推荐，帮你挑选最有品质的食材和厨具，瞬间成为身边人仰慕的美食专家。</dd>
+                  <dd><mark>圈粉指数</mark><meter value="90" min="0" max="100" low="85" high="95" title="65分" optimum="100"></meter></dd>
+                  <dd><mark>好评指数</mark><meter value="80" min="0" max="100" low="85" high="95" title="65分" optimum="100"></meter></dd>
+                  <dd><mark>人气指数</mark><meter value="95" min="0" max="100" low="85" high="95" title="65分" optimum="100"></meter></dd>
+                  <br><hr><br>
+           <dt><h2 style="font-style: oblique;">掌厨</h2></dt>
+		  <a href="https://www.zhangchuwang.net/" target="掌厨">掌厨</a>
+                 <dd>&nbsp;&nbsp;&nbsp;&nbsp;掌厨app是由深圳市金版文化数字传媒有限公司开发的一款专门的美食菜谱视频APP，于2015年上线。app在华为应用市场下载量超过336万次，在腾讯应用宝下载量到达297万人次。app提供鲁菜、川菜、苏菜、粤菜、闽菜、浙菜、徽菜、湘菜、凉菜、私房菜、家常菜、特色菜的做法，为孕妇、儿童、婴幼儿、产妇、减肥瘦身定制健康营养美食。但与其他做菜APP不同的是，掌厨的每道菜谱都有对应的做法视频教程，并提供详细的做菜材料、做法、相关常识及相宜相克的细节说明。同时，掌厨还开发了美食社区，用户可以分享菜谱、成果照，结交美食好友。除上述功能，掌厨在应用里还提供食疗板块，用户在身体不适的情况下，看过医生后在后续饮食上可以根据食疗菜谱选择后续的食材调养。</dd>
+                 <dd><mark>圈粉指数</mark><meter value="93" min="0" max="100" low="85" high="95" title="65分" optimum="100"></meter></dd>
+                  <dd><mark>好评指数</mark><meter value="85" min="0" max="100" low="85" high="95" title="65分" optimum="100"></meter></dd>
+                  <dd><mark>人气指数</mark><meter value="70" min="0" max="100" low="85" high="95" title="65分" optimum="100"></meter></dd>
+                  <br><hr><br>
+           <dt><h2 style="font-style: oblique;">豆果美食</h2></dt>
+		 <a href="https://www.douguo.com/" target="豆果美食">豆果美食</a>
+                 <dd>&nbsp;&nbsp;&nbsp;&nbsp;豆果美食是北京豆果信息技术有限公司开发的一款美食菜谱类app，上线于2011年2月。在华为应用市场下载量超过1亿次，腾讯应用宝和百度手机助手分别达到3401万人次、2595万人次，汇聚近2亿的美食用户。精选500万道美食菜谱，从吃货日常“家常菜”到全球各国 “各地美味”，有无辣不欢“下饭菜”，也有新手小白“快手餐”，在这里找到你365天的每一餐。APP提供美食视频在线教学，直击现场，在线互动问答。还搭建“美食日记”社交平台，在线厨艺交流、美食分享。豆果美食APP连续荣获 App Store “最佳美食应用”称号，2017年度最佳APP，还荣获中国app热门应用生活服务类TOP10</dd>
+                 <dd><mark>圈粉指数</mark><meter value="98" min="0" max="100" low="85" high="95" title="65分" optimum="100"></meter></dd>
+                  <dd><mark>好评指数</mark><meter value="93" min="0" max="100" low="85" high="95" title="65分" optimum="100"></meter></dd>
+                  <dd><mark>人气指数</mark><meter value="80" min="0" max="100" low="85" high="95" title="65分" optimum="100"></meter></dd>
+                  <br><hr><br>
+           <dt><h2 style="font-style: oblique;">嘉肴</h2></dt>
+		  <a href="http://www.danji100.com/app/155875.html" target="嘉肴">嘉肴</a>
+                  <dd>&nbsp;&nbsp;&nbsp;&nbsp;嘉肴做菜家常菜谱大全是由青岛嘉铭文化传播有限公司开发的一款厨房小白学做菜必备的APP。在华为应用市场下载量超过1484万人次，提供时令菜谱、中西餐、小吃等各种类型的菜谱，汇集川、粤、湘、鲁、浙、闽、徽等中国各系菜品；还根据个体的口味、健康状态、体质、慢性疾病等，提供食疗菜谱、养生菜谱、美容菜谱、月子菜谱等，支持定制三餐、测试体质等功能；还有小吃、糕点、早餐、甜点、热菜、凉菜等，以及儿童、孕妇、老人菜谱等特定人群菜品。AI营养师在线定制一日三餐，每日饮食打卡，坚持轻食生活，远离亚健康。</dd>
+                  <dd><mark>圈粉指数</mark><meter value="87" min="0" max="100" low="85" high="95" title="65分" optimum="100"></meter></dd>
+                  <dd><mark>好评指数</mark><meter value="95" min="0" max="100" low="85" high="95" title="65分" optimum="100"></meter></dd>
+                  <dd><mark>人气指数</mark><meter value="97" min="0" max="100" low="85" high="95" title="65分" optimum="100"></meter></dd>
+                  <br><hr><br>
+           <dt><h2 style="font-style: oblique;">懒饭</h2></dt>
+		   <a href="https://lanfanapp.com/" target="懒饭">懒饭</a>
+                   <dd>&nbsp;&nbsp;&nbsp;&nbsp;懒饭app是北京瑞荻互动科技有限公司开发的一款看视频学做饭的客户端应用，是下厨房的内部孵化项目。但与下厨房不同，所有内容均为PGC，在保证所有内容质量的同时，对新手会更加友好。懒饭在华为应用市场下载量超过662万次。App的菜谱均是采用视频的模式教学，所有食材、调料的用量精确到克、毫升；明确炖煮、炒制等步骤所需时长，保留详细的图文菜谱，关键步骤还会有详细的防出错小贴士、有用的厨房小技巧，更方便新手跟做，以及还提供烹饪难度描述、菜谱评分等维度，辅助新手做菜谱选择，让新手也能做出好吃好看的菜。此外App还根据时令节气，告诉你应该吃什么，每一餐都不重样。而且在APP里面还能随时添加文字笔记，或上传图片记录下厨记忆。</dd>
+                   <dd><mark>圈粉指数</mark><meter value="80" min="0" max="100" low="85" high="95" title="65分" optimum="100"></meter></dd>
+                  <dd><mark>好评指数</mark><meter value="85" min="0" max="100" low="85" high="95" title="65分" optimum="100"></meter></dd>
+                  <dd><mark>人气指数</mark><meter value="90" min="0" max="100" low="85" high="95" title="65分" optimum="100"></meter></dd>
+                  
+        </dl>
+        <h2 style="text-align:right; font-family: 幼圆;"><a href="index.html" style="color:burlywood">首页</a></h2>
+</body>
+</html>

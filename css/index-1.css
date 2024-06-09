@@ -1,0 +1,52 @@
+        body{
+            background-color:azure;
+        }
+        /* 去除标签默认的margin和padding */
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .logo{
+            width: 300px;
+            height: 80px;
+            float: left;
+        }
+        .menu{
+            width: 700px;
+            height: 100px;
+            float: right;
+        }
+        .clear{
+            clear: both;
+        }
+        /* 设置标题的颜色和居中方式 */
+        h1{
+            color: goldenrod;
+            text-align: center;
+        }
+        /* 导航栏 */
+        ul{
+            margin-right: 50px;
+            list-style: none;
+        }
+        /* 垂直对齐文本顶部 */
+        ul li{
+            vertical-align: top;
+        }
+        ul li a{
+            float: right;
+            width: 80px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 14px;
+            text-decoration: none;
+            color:darkorange;
+        }
+        .logo a{
+            margin-left: 80px;
+        }
+        .footer{
+            width: auto;
+            height: 800px;
+        }
